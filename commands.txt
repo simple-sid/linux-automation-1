@@ -1,0 +1,26 @@
+sudo adduser ram
+id ram
+pwd
+cd
+whoami
+su ram
+exit
+
+sudo apt install mailutils -y
+mail --version
+sudo service postfix status
+sudo su
+
+/etc/postfix# hostname
+/etc/postfix# vim main.cf
+
+cd sasl
+vim sasl_passwd
+postmap sasl_passwd
+chmod 600 sasl_passwd*
+
+service postfix status
+service postfix start
+exit
+
+echo 'this is the body' | mail -s 'this is the subject' ash07msd@gmail.com 
